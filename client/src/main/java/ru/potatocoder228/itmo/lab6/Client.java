@@ -1,6 +1,5 @@
 package ru.potatocoder228.itmo.lab6;
 
-import com.sun.org.apache.bcel.internal.generic.FieldGenOrMethodGen;
 import ru.potatocoder228.itmo.lab6.connection.AnswerMsg;
 import ru.potatocoder228.itmo.lab6.connection.AskMsg;
 import ru.potatocoder228.itmo.lab6.exceptions.ConnectionException;
@@ -38,7 +37,7 @@ public class Client {
 
     }
 
-    public void run() throws ConnectionException{
+    public void run() throws ConnectionException {
         try {
             ClientConsole clientConsole = new ClientConsole(false);
             while (true) {
@@ -62,19 +61,6 @@ public class Client {
         } catch (IOException e) {
             System.out.println("Ошибка при получении ответа от сервера. Возможно, он временно недоступен.");
             run();
-            //while (true) {
-            //    Scanner scanner = new Scanner(System.in);
-            //    if (scanner.nextLine().length() > 1) {
-            //        startConnection(host, port);
-            //        sendMessage(msg);
-            //        try {
-            //            AskMsg msg1 = receiveObject();
-            //            System.out.println(msg1.getMessage());
-            //        } catch (IOException e) {
-            //            System.out.println("Ошибка при получении сообщения");
-            //        }
-            //    }
-            //}
         }
     }
     public void start(String[] args) {

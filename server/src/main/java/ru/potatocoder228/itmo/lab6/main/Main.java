@@ -1,6 +1,5 @@
 package ru.potatocoder228.itmo.lab6.main;
 
-import ru.potatocoder228.itmo.lab6.exceptions.ConnectionException;
 import ru.potatocoder228.itmo.lab6.log.Log;
 import ru.potatocoder228.itmo.lab6.server.Server;
 
